@@ -1,0 +1,15 @@
+<launch>
+
+  <!-- Start the VRPN client -->
+  <include file="$(find vrpn_client_ros)/launch/optitrack.launch"/>
+
+  <include file="$(find realsense2_camera)/launch/rs_rgbd.launch"/>
+
+  <!-- Start ROSFlight and calibrate imu -->
+<!--  <include file="/home/odroid/catkin_ws/src/rosflight/rosflight/launch/rf_startup.launch" />
+-->
+
+  <!-- Start the ROSCopter MEKF 
+  <include file="/home/odroid/catkin_ws/src/roscopter/roscopter/launch/mekf.launch" /> -->
+
+</launch>         

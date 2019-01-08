@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="rosbag" type="record" name="fleming_data"
+        args=" -O /tmp/fleming_11_29_18- /tf /tf_static /vrpn_client_node/SubT/pose /vrpn_client_node/SubT/twist /odom /camera/depth_registered/points" />
+
+</launch>         

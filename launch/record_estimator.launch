@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="rosbag" type="record" name="fleming_data"
+        args=" -O /tmp/fleming_12_4_18-est1 /estimate" />
+
+</launch>         

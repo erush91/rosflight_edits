@@ -1,0 +1,20 @@
+<launch>
+
+   <node name="rosflight_io" pkg="rosflight" type="rosflight_io" output="screen"/>
+
+   <node pkg="rosservice" type="rosservice" name="cal_imu" args="call /calibrate_imu" output="screen"/>
+
+   <node pkg="rosservice" type="rosservice" name="cal_baro" args="call /calibrate_baro" output="screen"/>
+
+   <node pkg="rosservice" type="rosservice" name="param_set_MIXER" args="call /param_set MIXER 2" output="screen"/>
+ 
+   <node pkg="rosservice" type="rosservice" name="param_set_FIXED_WING" args="call /param_set FIXED_WING 0" output="screen"/>
+
+   <node pkg="rosservice" type="rosservice" name="param_set_MOTOR_PWM_UPDATE" args="call /param_set MOTOR_PWM_UPDATE 450" output="screen"/>
+
+   <node pkg="rosservice" type="rosservice" name="param_write" args="call /param_write" output="screen"/>
+  
+</launch>
+
+
+

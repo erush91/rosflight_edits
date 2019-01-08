@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="rosbag" type="record" name="fleming_data"
+        args=" -O /tmp/realsense1 /tf /vrpn_client_node/SubT/pose /camera/depth_registered/points" />
+
+</launch>         

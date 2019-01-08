@@ -1,0 +1,19 @@
+<launch>
+
+  <!-- Start the VRPN client -->
+  <include file="$(find vrpn_client_ros)/launch/sample.launch"/>
+
+  <include file="$(find realsense2_camera)/launch/rs_rgbd.launch"/>
+ 
+  <node pkg = "rosflight" type="vrpn2odom" name="vrpn2odom" output="screen" />
+
+  <node pkg = "tf2_ros" type="static_transform_publisher" name="tf_pub" output="screen" 
+               args="0 0 0 0 0 0 1 /SubT /camera_link"/>
+
+  <!-- Start ROSFlight and calibrate imu -->
+ <!-- <include file="/home/odroid/catkin_ws/src/rosflight/rosflight/launch/rf_startup.launch" />
+-->
+
+  <!-- Start the ROSCopter MEKF 
+  <include file="/home/odroid/catkin_ws/src/roscopter/roscopter/launch/mekf.launch" /> -->
+</launch>         

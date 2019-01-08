@@ -1,0 +1,15 @@
+<launch>
+
+  <!-- Start the VRPN client -->
+  <include file="$(find vrpn_client_ros)/launch/optitrack.launch"/>
+
+  <!-- Start ROSFlight and calibrate imu -->
+  <include file="/home/odroid/catkin_ws/src/rosflight/rosflight/launch/rf_startup.launch" />
+
+  <!-- Start the ROSCopter MEKF --> 
+  <include file="/home/odroid/catkin_ws/src/roscopter_edits/launch/mekf.launch" /> 
+
+  <!-- Start the reef estimator -->
+<!--  <include file="/home/odroid/catkin_ws/src/reef_estimator/launch/xy_estimator.launch" /> -->
+
+</launch>         
